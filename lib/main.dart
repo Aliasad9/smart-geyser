@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         borderRadius: BorderRadius.circular(10)),
                     color: Theme.of(context).primaryColor,
                     child: Text(
-                      "Get Started",
+                      "Dashboard",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
