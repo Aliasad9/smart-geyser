@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "230750648550",
+    "firebase_url": "https://smart-geyser.firebaseio.com",
+    "project_id": "smart-geyser",
+    "storage_bucket": "smart-geyser.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230750648550:android:25c58cacfd1816928b2327",
+        "android_client_info": {
+          "package_name": "com.ali.smartgeyser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "230750648550-isn4cp352u8218m7cflnmjhb4bu4osoq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ38e-ES41JYWcbCo--b0zU8DV8JVJzJY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "230750648550-isn4cp352u8218m7cflnmjhb4bu4osoq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

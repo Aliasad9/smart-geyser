@@ -28,20 +28,25 @@ class _DashboardScreenState extends State<DashboardScreen> {
         child: StreamBuilder(
             stream: _database.reference().child("App").child("1").onValue,
             builder: (context, snapshot) {
-              Map<dynamic, dynamic> object = {};
-              snapshot.data.snapshot.value.forEach((dynamic key, dynamic data) {
-                object[key] = data.toString();
-              });
+              if (snapshot.hasData) {
+                Map<dynamic, dynamic> object = {};
+                snapshot.data.snapshot.value
+                    .forEach((dynamic key, dynamic data) {
+                  object[key] = data.toString();
+                });
 
-              _currentWaterTemperature =
-                  double.parse(object["current_water_temperature"]);
-              _currentStepperMotorPosition =
-                  int.parse(object["current_knob_position"]);
-              _currentPowerSource = int.parse(object["power_source"]);
-              if (_currentStepperMotorPosition == 0) {
-                _currentGeyserStatus = 0;
+                _currentWaterTemperature =
+                    double.parse(object["current_water_temperature"]);
+                _currentStepperMotorPosition =
+                    int.parse(object["current_knob_position"]);
+                _currentPowerSource = int.parse(object["power_source"]);
+                if (_currentStepperMotorPosition == 0) {
+                  _currentGeyserStatus = 0;
+                } else {
+                  _currentGeyserStatus = 1;
+                }
               } else {
-                _currentGeyserStatus = 1;
+                return Center(child: CircularProgressIndicator());
               }
 
               return Container(
