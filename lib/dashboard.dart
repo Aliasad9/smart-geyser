@@ -295,7 +295,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                     "instruction_for_motor":
                                         getKnobPosition(_selectedVehicle),
                                   });
-                                  Navigator.pop(context);
+
                                 },
                                 items: _knobPositions.map((String veh) {
                                   return DropdownMenuItem(
